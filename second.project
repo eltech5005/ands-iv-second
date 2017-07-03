@@ -94,12 +94,15 @@
   </Settings>
   <VirtualDirectory Name="src">
     <File Name="src/main.cpp"/>
-    <File Name="src/bitWord.h"/>
-    <File Name="src/bitWordOR.cpp"/>
-    <File Name="src/bitWordDestructor.cpp"/>
-    <File Name="src/bitWordConstructor.cpp"/>
-    <File Name="src/bitWordShow.cpp"/>
-    <File Name="src/bitWordNOT.cpp"/>
-    <File Name="src/bitWordEqual.cpp"/>
+    <File Name="src/bitWord.h" ExcludeProjConfig="Debug"/>
+    <File Name="src/bitWordOR.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="src/bitWordDestructor.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="src/bitWordConstructor.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="src/bitWordShow.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="src/bitWordNOT.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="src/bitWordEqual.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="src/bitSet.h"/>
+    <File Name="src/bitSetConstructor.cpp"/>
+    <File Name="src/bitSetDestructor.cpp"/>
   </VirtualDirectory>
 </CodeLite_Project>

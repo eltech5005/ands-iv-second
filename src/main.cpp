@@ -6,7 +6,7 @@
 
 #include <iostream>
 
-#include <src/bitWord.h>
+#include <src/bitSet.h>
 
 using namespace std;
 
@@ -19,10 +19,6 @@ int main (int argc, char **argv) {
     set C('C',"68");
     set D('D',"19");
     set E;
-    E = ( A / (B | C) ) | D;
-
-    E.show();
-
     return 0;
 
 }
