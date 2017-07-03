@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Adanos
-Date                   :=03/07/2017
+Date                   :=04/07/2017
 CodeLitePath           :="C:/Program Files/CodeLite"
 LinkerName             :=C:/TDM-GCC-32/bin/g++.exe
 SharedObjectLinkerName :=C:/TDM-GCC-32/bin/g++.exe -shared -fPIC
@@ -62,7 +62,7 @@ AS       := C:/TDM-GCC-32/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/src_main.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordOR.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordDestructor.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordConstructor.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordShow.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordNOT.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/src_main.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordOR.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordDestructor.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordConstructor.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordShow.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordNOT.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordEqual.cpp$(ObjectSuffix) 
 
 
 
@@ -140,6 +140,14 @@ $(IntermediateDirectory)/src_bitWordNOT.cpp$(DependSuffix): src/bitWordNOT.cpp
 
 $(IntermediateDirectory)/src_bitWordNOT.cpp$(PreprocessSuffix): src/bitWordNOT.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_bitWordNOT.cpp$(PreprocessSuffix) src/bitWordNOT.cpp
+
+$(IntermediateDirectory)/src_bitWordEqual.cpp$(ObjectSuffix): src/bitWordEqual.cpp $(IntermediateDirectory)/src_bitWordEqual.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/ANDS-IV/second/src/bitWordEqual.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_bitWordEqual.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_bitWordEqual.cpp$(DependSuffix): src/bitWordEqual.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_bitWordEqual.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_bitWordEqual.cpp$(DependSuffix) -MM src/bitWordEqual.cpp
+
+$(IntermediateDirectory)/src_bitWordEqual.cpp$(PreprocessSuffix): src/bitWordEqual.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_bitWordEqual.cpp$(PreprocessSuffix) src/bitWordEqual.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

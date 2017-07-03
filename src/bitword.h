@@ -22,7 +22,6 @@ class set {
         set ();
         set (char);
         set (char, char*);
-        set (const set &);
         ~set ();
 
 };

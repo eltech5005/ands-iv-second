@@ -100,5 +100,6 @@
     <File Name="src/bitWordConstructor.cpp"/>
     <File Name="src/bitWordShow.cpp"/>
     <File Name="src/bitWordNOT.cpp"/>
+    <File Name="src/bitWordEqual.cpp"/>
   </VirtualDirectory>
 </CodeLite_Project>

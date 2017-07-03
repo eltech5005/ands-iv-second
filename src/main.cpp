@@ -14,9 +14,14 @@ int set::uniPower = 10;
 
 int main (int argc, char **argv) {
 
-    set test('A',"23467");
+    set A('A',"23467");
+    set B('B',"023");
+    set C('C',"68");
+    set D('D',"19");
+    set E;
+    E = ( A / (B | C) ) | D;
 
-    test.show(1);
+    E.show();
 
     return 0;
 
