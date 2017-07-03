@@ -62,7 +62,7 @@ AS       := C:/TDM-GCC-32/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/src_main.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitSetConstructor.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitSetDestructor.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitSetEqual.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitSetNOT.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/src_main.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitSetConstructor.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitSetDestructor.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitSetEqual.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitSetNOT.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitSetOR.cpp$(ObjectSuffix) 
 
 
 
@@ -132,6 +132,14 @@ $(IntermediateDirectory)/src_bitSetNOT.cpp$(DependSuffix): src/bitSetNOT.cpp
 
 $(IntermediateDirectory)/src_bitSetNOT.cpp$(PreprocessSuffix): src/bitSetNOT.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_bitSetNOT.cpp$(PreprocessSuffix) src/bitSetNOT.cpp
+
+$(IntermediateDirectory)/src_bitSetOR.cpp$(ObjectSuffix): src/bitSetOR.cpp $(IntermediateDirectory)/src_bitSetOR.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/ANDS-IV/second/src/bitSetOR.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_bitSetOR.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_bitSetOR.cpp$(DependSuffix): src/bitSetOR.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_bitSetOR.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_bitSetOR.cpp$(DependSuffix) -MM src/bitSetOR.cpp
+
+$(IntermediateDirectory)/src_bitSetOR.cpp$(PreprocessSuffix): src/bitSetOR.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_bitSetOR.cpp$(PreprocessSuffix) src/bitSetOR.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

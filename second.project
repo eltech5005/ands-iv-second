@@ -106,5 +106,6 @@
     <File Name="src/bitSetDestructor.cpp"/>
     <File Name="src/bitSetEqual.cpp"/>
     <File Name="src/bitSetNOT.cpp"/>
+    <File Name="src/bitSetOR.cpp"/>
   </VirtualDirectory>
 </CodeLite_Project>
