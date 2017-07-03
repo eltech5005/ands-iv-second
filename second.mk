@@ -62,7 +62,7 @@ AS       := C:/TDM-GCC-32/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/src_main.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordOR.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordDestructor.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordConstructor.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordShow.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/src_main.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordOR.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordDestructor.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordConstructor.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordShow.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordNOT.cpp$(ObjectSuffix) 
 
 
 
@@ -132,6 +132,14 @@ $(IntermediateDirectory)/src_bitWordShow.cpp$(DependSuffix): src/bitWordShow.cpp
 
 $(IntermediateDirectory)/src_bitWordShow.cpp$(PreprocessSuffix): src/bitWordShow.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_bitWordShow.cpp$(PreprocessSuffix) src/bitWordShow.cpp
+
+$(IntermediateDirectory)/src_bitWordNOT.cpp$(ObjectSuffix): src/bitWordNOT.cpp $(IntermediateDirectory)/src_bitWordNOT.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/ANDS-IV/second/src/bitWordNOT.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_bitWordNOT.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_bitWordNOT.cpp$(DependSuffix): src/bitWordNOT.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_bitWordNOT.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_bitWordNOT.cpp$(DependSuffix) -MM src/bitWordNOT.cpp
+
+$(IntermediateDirectory)/src_bitWordNOT.cpp$(PreprocessSuffix): src/bitWordNOT.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_bitWordNOT.cpp$(PreprocessSuffix) src/bitWordNOT.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

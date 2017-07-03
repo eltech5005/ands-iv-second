@@ -99,5 +99,6 @@
     <File Name="src/bitWordDestructor.cpp"/>
     <File Name="src/bitWordConstructor.cpp"/>
     <File Name="src/bitWordShow.cpp"/>
+    <File Name="src/bitWordNOT.cpp"/>
   </VirtualDirectory>
 </CodeLite_Project>

@@ -18,7 +18,6 @@ class set {
         set operator = (const set &);
 
         void show (bool mode = true);
-        void clear ();
 
         set ();
         set (char);
