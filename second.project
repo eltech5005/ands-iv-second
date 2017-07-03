@@ -94,19 +94,19 @@
   </Settings>
   <VirtualDirectory Name="src">
     <File Name="src/main.cpp"/>
-    <File Name="src/bitWord.h" ExcludeProjConfig="Debug"/>
-    <File Name="src/bitWordOR.cpp" ExcludeProjConfig="Debug"/>
-    <File Name="src/bitWordDestructor.cpp" ExcludeProjConfig="Debug"/>
-    <File Name="src/bitWordConstructor.cpp" ExcludeProjConfig="Debug"/>
-    <File Name="src/bitWordShow.cpp" ExcludeProjConfig="Debug"/>
-    <File Name="src/bitWordNOT.cpp" ExcludeProjConfig="Debug"/>
-    <File Name="src/bitWordEqual.cpp" ExcludeProjConfig="Debug"/>
-    <File Name="src/bitSet.h"/>
-    <File Name="src/bitSetConstructor.cpp"/>
-    <File Name="src/bitSetDestructor.cpp"/>
-    <File Name="src/bitSetEqual.cpp"/>
-    <File Name="src/bitSetNOT.cpp"/>
-    <File Name="src/bitSetOR.cpp"/>
-    <File Name="src/bitSetShow.cpp"/>
+    <File Name="src/bitWord.h" ExcludeProjConfig=""/>
+    <File Name="src/bitWordOR.cpp" ExcludeProjConfig=""/>
+    <File Name="src/bitWordDestructor.cpp" ExcludeProjConfig=""/>
+    <File Name="src/bitWordConstructor.cpp" ExcludeProjConfig=""/>
+    <File Name="src/bitWordShow.cpp" ExcludeProjConfig=""/>
+    <File Name="src/bitWordNOT.cpp" ExcludeProjConfig=""/>
+    <File Name="src/bitWordEqual.cpp" ExcludeProjConfig=""/>
+    <File Name="src/bitSet.h" ExcludeProjConfig="Debug"/>
+    <File Name="src/bitSetConstructor.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="src/bitSetDestructor.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="src/bitSetEqual.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="src/bitSetNOT.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="src/bitSetOR.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="src/bitSetShow.cpp" ExcludeProjConfig="Debug"/>
   </VirtualDirectory>
 </CodeLite_Project>
