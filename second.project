@@ -104,5 +104,6 @@
     <File Name="src/bitSet.h"/>
     <File Name="src/bitSetConstructor.cpp"/>
     <File Name="src/bitSetDestructor.cpp"/>
+    <File Name="src/bitSetEqual.cpp"/>
   </VirtualDirectory>
 </CodeLite_Project>
