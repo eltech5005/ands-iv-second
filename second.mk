@@ -62,7 +62,7 @@ AS       := C:/TDM-GCC-32/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/src_main.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitSetConstructor.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitSetDestructor.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitSetEqual.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/src_main.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitSetConstructor.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitSetDestructor.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitSetEqual.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitSetNOT.cpp$(ObjectSuffix) 
 
 
 
@@ -124,6 +124,14 @@ $(IntermediateDirectory)/src_bitSetEqual.cpp$(DependSuffix): src/bitSetEqual.cpp
 
 $(IntermediateDirectory)/src_bitSetEqual.cpp$(PreprocessSuffix): src/bitSetEqual.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_bitSetEqual.cpp$(PreprocessSuffix) src/bitSetEqual.cpp
+
+$(IntermediateDirectory)/src_bitSetNOT.cpp$(ObjectSuffix): src/bitSetNOT.cpp $(IntermediateDirectory)/src_bitSetNOT.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/ANDS-IV/second/src/bitSetNOT.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_bitSetNOT.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_bitSetNOT.cpp$(DependSuffix): src/bitSetNOT.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_bitSetNOT.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_bitSetNOT.cpp$(DependSuffix) -MM src/bitSetNOT.cpp
+
+$(IntermediateDirectory)/src_bitSetNOT.cpp$(PreprocessSuffix): src/bitSetNOT.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_bitSetNOT.cpp$(PreprocessSuffix) src/bitSetNOT.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
