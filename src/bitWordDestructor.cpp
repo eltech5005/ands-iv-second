@@ -4,5 +4,5 @@
 
 #include <src/bitWord.h>
 
-set::~set() {
+set::~set () {
 }
