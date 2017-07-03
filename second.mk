@@ -62,7 +62,7 @@ AS       := C:/TDM-GCC-32/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/src_main.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordOR.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordDestructor.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordConstructor.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/src_main.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordOR.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordDestructor.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordConstructor.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordShow.cpp$(ObjectSuffix) 
 
 
 
@@ -124,6 +124,14 @@ $(IntermediateDirectory)/src_bitWordConstructor.cpp$(DependSuffix): src/bitWordC
 
 $(IntermediateDirectory)/src_bitWordConstructor.cpp$(PreprocessSuffix): src/bitWordConstructor.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_bitWordConstructor.cpp$(PreprocessSuffix) src/bitWordConstructor.cpp
+
+$(IntermediateDirectory)/src_bitWordShow.cpp$(ObjectSuffix): src/bitWordShow.cpp $(IntermediateDirectory)/src_bitWordShow.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/ANDS-IV/second/src/bitWordShow.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_bitWordShow.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_bitWordShow.cpp$(DependSuffix): src/bitWordShow.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_bitWordShow.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_bitWordShow.cpp$(DependSuffix) -MM src/bitWordShow.cpp
+
+$(IntermediateDirectory)/src_bitWordShow.cpp$(PreprocessSuffix): src/bitWordShow.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_bitWordShow.cpp$(PreprocessSuffix) src/bitWordShow.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

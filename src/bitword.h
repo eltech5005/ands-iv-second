@@ -17,7 +17,7 @@ class set {
         set operator / (const set&) const;
         set operator = (const set &);
 
-        void show ();
+        void show (bool mode = true);
         void clear ();
 
         set ();

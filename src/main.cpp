@@ -10,11 +10,14 @@
 
 using namespace std;
 
+int set::uniPower = 10;
+
 int main (int argc, char **argv) {
 
-    set test;
+    set test('A',"23467");
 
-    cout << "Hello world";
+    test.show(1);
 
     return 0;
+
 }
