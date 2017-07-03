@@ -94,5 +94,9 @@
   </Settings>
   <VirtualDirectory Name="src">
     <File Name="src/main.cpp"/>
+    <File Name="src/bitWord.h"/>
+    <File Name="src/bitWordOR.cpp"/>
+    <File Name="src/bitWordDestructor.cpp"/>
+    <File Name="src/bitWordConstructor.cpp"/>
   </VirtualDirectory>
 </CodeLite_Project>

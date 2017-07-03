@@ -5,18 +5,18 @@
 ## Debug
 ProjectName            :=second
 ConfigurationName      :=Debug
-WorkspacePath          :=/home/adanos/Documents/ANDS-IV
-ProjectPath            :=/home/adanos/Documents/ANDS-IV/second
+WorkspacePath          :=D:/ANDS-IV
+ProjectPath            :=D:/ANDS-IV/second
 IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
-User                   :=Dr. Adanos Diego Flamel
-Date                   :=03/07/17
-CodeLitePath           :=/home/adanos/.codelite
-LinkerName             :=/usr/bin/g++
-SharedObjectLinkerName :=/usr/bin/g++ -shared -fPIC
+User                   :=Adanos
+Date                   :=03/07/2017
+CodeLitePath           :="C:/Program Files/CodeLite"
+LinkerName             :=C:/TDM-GCC-32/bin/g++.exe
+SharedObjectLinkerName :=C:/TDM-GCC-32/bin/g++.exe -shared -fPIC
 ObjectSuffix           :=.o
 DependSuffix           :=.o.d
 PreprocessSuffix       :=.i
@@ -34,7 +34,9 @@ ArchiveOutputSwitch    :=
 PreprocessOnlySwitch   :=-E
 ObjectsFileList        :="second.txt"
 PCHCompileFlags        :=
-MakeDirCommand         :=mkdir -p
+MakeDirCommand         :=makedir
+RcCmpOptions           := 
+RcCompilerName         :=C:/TDM-GCC-32/bin/windres.exe
 LinkOptions            :=  
 IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch). 
 IncludePCH             := 
@@ -47,20 +49,20 @@ LibPath                := $(LibraryPathSwitch).
 ## Common variables
 ## AR, CXX, CC, AS, CXXFLAGS and CFLAGS can be overriden using an environment variables
 ##
-AR       := /usr/bin/ar rcu
-CXX      := /usr/bin/g++
-CC       := /usr/bin/gcc
+AR       := C:/TDM-GCC-32/bin/ar.exe rcu
+CXX      := C:/TDM-GCC-32/bin/g++.exe
+CC       := C:/TDM-GCC-32/bin/gcc.exe
 CXXFLAGS :=  -g -O0 -Wall $(Preprocessors)
 CFLAGS   :=  -g -O0 -Wall $(Preprocessors)
 ASFLAGS  := 
-AS       := /usr/bin/as
+AS       := C:/TDM-GCC-32/bin/as.exe
 
 
 ##
 ## User defined environment variables
 ##
-CodeLiteDir:=/usr/share/codelite
-Objects0=$(IntermediateDirectory)/src_main.cpp$(ObjectSuffix) 
+CodeLiteDir:=C:\Program Files\CodeLite
+Objects0=$(IntermediateDirectory)/src_main.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordOR.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordDestructor.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordConstructor.cpp$(ObjectSuffix) 
 
 
 
@@ -79,11 +81,11 @@ $(OutputFile): $(IntermediateDirectory)/.d $(Objects)
 	$(LinkerName) $(OutputSwitch)$(OutputFile) @$(ObjectsFileList) $(LibPath) $(Libs) $(LinkOptions)
 
 MakeIntermediateDirs:
-	@test -d ./Debug || $(MakeDirCommand) ./Debug
+	@$(MakeDirCommand) "./Debug"
 
 
 $(IntermediateDirectory)/.d:
-	@test -d ./Debug || $(MakeDirCommand) ./Debug
+	@$(MakeDirCommand) "./Debug"
 
 PreBuild:
 
@@ -92,12 +94,36 @@ PreBuild:
 ## Objects
 ##
 $(IntermediateDirectory)/src_main.cpp$(ObjectSuffix): src/main.cpp $(IntermediateDirectory)/src_main.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/adanos/Documents/ANDS-IV/second/src/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_main.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/ANDS-IV/second/src/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_main.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/src_main.cpp$(DependSuffix): src/main.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_main.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_main.cpp$(DependSuffix) -MM src/main.cpp
 
 $(IntermediateDirectory)/src_main.cpp$(PreprocessSuffix): src/main.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_main.cpp$(PreprocessSuffix) src/main.cpp
+
+$(IntermediateDirectory)/src_bitWordOR.cpp$(ObjectSuffix): src/bitWordOR.cpp $(IntermediateDirectory)/src_bitWordOR.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/ANDS-IV/second/src/bitWordOR.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_bitWordOR.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_bitWordOR.cpp$(DependSuffix): src/bitWordOR.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_bitWordOR.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_bitWordOR.cpp$(DependSuffix) -MM src/bitWordOR.cpp
+
+$(IntermediateDirectory)/src_bitWordOR.cpp$(PreprocessSuffix): src/bitWordOR.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_bitWordOR.cpp$(PreprocessSuffix) src/bitWordOR.cpp
+
+$(IntermediateDirectory)/src_bitWordDestructor.cpp$(ObjectSuffix): src/bitWordDestructor.cpp $(IntermediateDirectory)/src_bitWordDestructor.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/ANDS-IV/second/src/bitWordDestructor.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_bitWordDestructor.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_bitWordDestructor.cpp$(DependSuffix): src/bitWordDestructor.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_bitWordDestructor.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_bitWordDestructor.cpp$(DependSuffix) -MM src/bitWordDestructor.cpp
+
+$(IntermediateDirectory)/src_bitWordDestructor.cpp$(PreprocessSuffix): src/bitWordDestructor.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_bitWordDestructor.cpp$(PreprocessSuffix) src/bitWordDestructor.cpp
+
+$(IntermediateDirectory)/src_bitWordConstructor.cpp$(ObjectSuffix): src/bitWordConstructor.cpp $(IntermediateDirectory)/src_bitWordConstructor.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/ANDS-IV/second/src/bitWordConstructor.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_bitWordConstructor.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_bitWordConstructor.cpp$(DependSuffix): src/bitWordConstructor.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_bitWordConstructor.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_bitWordConstructor.cpp$(DependSuffix) -MM src/bitWordConstructor.cpp
+
+$(IntermediateDirectory)/src_bitWordConstructor.cpp$(PreprocessSuffix): src/bitWordConstructor.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_bitWordConstructor.cpp$(PreprocessSuffix) src/bitWordConstructor.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
