@@ -62,7 +62,7 @@ AS       := C:/TDM-GCC-32/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/src_main.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitSetConstructor.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitSetDestructor.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitSetEqual.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitSetNOT.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitSetOR.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/src_main.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitSetConstructor.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitSetDestructor.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitSetEqual.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitSetNOT.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitSetOR.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitSetShow.cpp$(ObjectSuffix) 
 
 
 
@@ -140,6 +140,14 @@ $(IntermediateDirectory)/src_bitSetOR.cpp$(DependSuffix): src/bitSetOR.cpp
 
 $(IntermediateDirectory)/src_bitSetOR.cpp$(PreprocessSuffix): src/bitSetOR.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_bitSetOR.cpp$(PreprocessSuffix) src/bitSetOR.cpp
+
+$(IntermediateDirectory)/src_bitSetShow.cpp$(ObjectSuffix): src/bitSetShow.cpp $(IntermediateDirectory)/src_bitSetShow.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/ANDS-IV/second/src/bitSetShow.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_bitSetShow.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_bitSetShow.cpp$(DependSuffix): src/bitSetShow.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_bitSetShow.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_bitSetShow.cpp$(DependSuffix) -MM src/bitSetShow.cpp
+
+$(IntermediateDirectory)/src_bitSetShow.cpp$(PreprocessSuffix): src/bitSetShow.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_bitSetShow.cpp$(PreprocessSuffix) src/bitSetShow.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

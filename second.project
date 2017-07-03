@@ -107,5 +107,6 @@
     <File Name="src/bitSetEqual.cpp"/>
     <File Name="src/bitSetNOT.cpp"/>
     <File Name="src/bitSetOR.cpp"/>
+    <File Name="src/bitSetShow.cpp"/>
   </VirtualDirectory>
 </CodeLite_Project>
