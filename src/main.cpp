@@ -24,10 +24,10 @@ int main (int argc, char **argv) {
     srand(time(NULL));
     
     /* Создаём множества */
-    set A('A',"23467");
-    set B('B',"023");
-    set C('C',"68");
-    set D('D',"19");
+    set A('A');
+    set B('B');
+    set C('C');
+    set D('D');
     set E;
     
      /* Выводим исходные множества */
