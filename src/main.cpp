@@ -53,6 +53,9 @@ int main (int argc, char **argv) {
 
     cout << endl << endl << "Set calculated 500000 times in " << runtime_total << " clicks." << endl;
 
+    std::cout << "\n Press enter to continue... "; 
+    std::cin.get(); 
+
     return 0;
 
 }

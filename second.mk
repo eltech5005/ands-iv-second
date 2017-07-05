@@ -2,18 +2,18 @@
 ## Auto Generated makefile by CodeLite IDE
 ## any manual changes will be erased      
 ##
-## Debug
+## Release
 ProjectName            :=second
-ConfigurationName      :=Debug
+ConfigurationName      :=Release
 WorkspacePath          :=D:/ANDS-IV
 ProjectPath            :=D:/ANDS-IV/second
-IntermediateDirectory  :=./Debug
+IntermediateDirectory  :=./Release
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Adanos
-Date                   :=04/07/2017
+Date                   :=05/07/2017
 CodeLitePath           :="C:/Program Files/CodeLite"
 LinkerName             :=C:/TDM-GCC-32/bin/g++.exe
 SharedObjectLinkerName :=C:/TDM-GCC-32/bin/g++.exe -shared -fPIC
@@ -28,7 +28,7 @@ LibraryPathSwitch      :=-L
 PreprocessorSwitch     :=-D
 SourceSwitch           :=-c 
 OutputFile             :=$(IntermediateDirectory)/$(ProjectName)
-Preprocessors          :=
+Preprocessors          :=$(PreprocessorSwitch)NDEBUG 
 ObjectSwitch           :=-o 
 ArchiveOutputSwitch    := 
 PreprocessOnlySwitch   :=-E
@@ -52,8 +52,8 @@ LibPath                := $(LibraryPathSwitch).
 AR       := C:/TDM-GCC-32/bin/ar.exe rcu
 CXX      := C:/TDM-GCC-32/bin/g++.exe
 CC       := C:/TDM-GCC-32/bin/gcc.exe
-CXXFLAGS :=  -g -O0 -Wall $(Preprocessors)
-CFLAGS   :=  -g -O0 -Wall $(Preprocessors)
+CXXFLAGS :=  -O2 -Wall -std=c++0x -static $(Preprocessors)
+CFLAGS   :=  -O2 -Wall -std=c++0x -static $(Preprocessors)
 ASFLAGS  := 
 AS       := C:/TDM-GCC-32/bin/as.exe
 
@@ -62,7 +62,7 @@ AS       := C:/TDM-GCC-32/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/src_main.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitSetConstructor.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitSetDestructor.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitSetEqual.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitSetNOT.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitSetOR.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitSetShow.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/src_main.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordOR.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordDestructor.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordConstructor.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordShow.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordNOT.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_bitWordEqual.cpp$(ObjectSuffix) 
 
 
 
@@ -81,11 +81,11 @@ $(OutputFile): $(IntermediateDirectory)/.d $(Objects)
 	$(LinkerName) $(OutputSwitch)$(OutputFile) @$(ObjectsFileList) $(LibPath) $(Libs) $(LinkOptions)
 
 MakeIntermediateDirs:
-	@$(MakeDirCommand) "./Debug"
+	@$(MakeDirCommand) "./Release"
 
 
 $(IntermediateDirectory)/.d:
-	@$(MakeDirCommand) "./Debug"
+	@$(MakeDirCommand) "./Release"
 
 PreBuild:
 
@@ -101,53 +101,53 @@ $(IntermediateDirectory)/src_main.cpp$(DependSuffix): src/main.cpp
 $(IntermediateDirectory)/src_main.cpp$(PreprocessSuffix): src/main.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_main.cpp$(PreprocessSuffix) src/main.cpp
 
-$(IntermediateDirectory)/src_bitSetConstructor.cpp$(ObjectSuffix): src/bitSetConstructor.cpp $(IntermediateDirectory)/src_bitSetConstructor.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/ANDS-IV/second/src/bitSetConstructor.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_bitSetConstructor.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/src_bitSetConstructor.cpp$(DependSuffix): src/bitSetConstructor.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_bitSetConstructor.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_bitSetConstructor.cpp$(DependSuffix) -MM src/bitSetConstructor.cpp
+$(IntermediateDirectory)/src_bitWordOR.cpp$(ObjectSuffix): src/bitWordOR.cpp $(IntermediateDirectory)/src_bitWordOR.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/ANDS-IV/second/src/bitWordOR.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_bitWordOR.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_bitWordOR.cpp$(DependSuffix): src/bitWordOR.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_bitWordOR.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_bitWordOR.cpp$(DependSuffix) -MM src/bitWordOR.cpp
 
-$(IntermediateDirectory)/src_bitSetConstructor.cpp$(PreprocessSuffix): src/bitSetConstructor.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_bitSetConstructor.cpp$(PreprocessSuffix) src/bitSetConstructor.cpp
+$(IntermediateDirectory)/src_bitWordOR.cpp$(PreprocessSuffix): src/bitWordOR.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_bitWordOR.cpp$(PreprocessSuffix) src/bitWordOR.cpp
 
-$(IntermediateDirectory)/src_bitSetDestructor.cpp$(ObjectSuffix): src/bitSetDestructor.cpp $(IntermediateDirectory)/src_bitSetDestructor.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/ANDS-IV/second/src/bitSetDestructor.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_bitSetDestructor.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/src_bitSetDestructor.cpp$(DependSuffix): src/bitSetDestructor.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_bitSetDestructor.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_bitSetDestructor.cpp$(DependSuffix) -MM src/bitSetDestructor.cpp
+$(IntermediateDirectory)/src_bitWordDestructor.cpp$(ObjectSuffix): src/bitWordDestructor.cpp $(IntermediateDirectory)/src_bitWordDestructor.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/ANDS-IV/second/src/bitWordDestructor.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_bitWordDestructor.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_bitWordDestructor.cpp$(DependSuffix): src/bitWordDestructor.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_bitWordDestructor.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_bitWordDestructor.cpp$(DependSuffix) -MM src/bitWordDestructor.cpp
 
-$(IntermediateDirectory)/src_bitSetDestructor.cpp$(PreprocessSuffix): src/bitSetDestructor.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_bitSetDestructor.cpp$(PreprocessSuffix) src/bitSetDestructor.cpp
+$(IntermediateDirectory)/src_bitWordDestructor.cpp$(PreprocessSuffix): src/bitWordDestructor.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_bitWordDestructor.cpp$(PreprocessSuffix) src/bitWordDestructor.cpp
 
-$(IntermediateDirectory)/src_bitSetEqual.cpp$(ObjectSuffix): src/bitSetEqual.cpp $(IntermediateDirectory)/src_bitSetEqual.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/ANDS-IV/second/src/bitSetEqual.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_bitSetEqual.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/src_bitSetEqual.cpp$(DependSuffix): src/bitSetEqual.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_bitSetEqual.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_bitSetEqual.cpp$(DependSuffix) -MM src/bitSetEqual.cpp
+$(IntermediateDirectory)/src_bitWordConstructor.cpp$(ObjectSuffix): src/bitWordConstructor.cpp $(IntermediateDirectory)/src_bitWordConstructor.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/ANDS-IV/second/src/bitWordConstructor.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_bitWordConstructor.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_bitWordConstructor.cpp$(DependSuffix): src/bitWordConstructor.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_bitWordConstructor.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_bitWordConstructor.cpp$(DependSuffix) -MM src/bitWordConstructor.cpp
 
-$(IntermediateDirectory)/src_bitSetEqual.cpp$(PreprocessSuffix): src/bitSetEqual.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_bitSetEqual.cpp$(PreprocessSuffix) src/bitSetEqual.cpp
+$(IntermediateDirectory)/src_bitWordConstructor.cpp$(PreprocessSuffix): src/bitWordConstructor.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_bitWordConstructor.cpp$(PreprocessSuffix) src/bitWordConstructor.cpp
 
-$(IntermediateDirectory)/src_bitSetNOT.cpp$(ObjectSuffix): src/bitSetNOT.cpp $(IntermediateDirectory)/src_bitSetNOT.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/ANDS-IV/second/src/bitSetNOT.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_bitSetNOT.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/src_bitSetNOT.cpp$(DependSuffix): src/bitSetNOT.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_bitSetNOT.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_bitSetNOT.cpp$(DependSuffix) -MM src/bitSetNOT.cpp
+$(IntermediateDirectory)/src_bitWordShow.cpp$(ObjectSuffix): src/bitWordShow.cpp $(IntermediateDirectory)/src_bitWordShow.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/ANDS-IV/second/src/bitWordShow.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_bitWordShow.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_bitWordShow.cpp$(DependSuffix): src/bitWordShow.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_bitWordShow.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_bitWordShow.cpp$(DependSuffix) -MM src/bitWordShow.cpp
 
-$(IntermediateDirectory)/src_bitSetNOT.cpp$(PreprocessSuffix): src/bitSetNOT.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_bitSetNOT.cpp$(PreprocessSuffix) src/bitSetNOT.cpp
+$(IntermediateDirectory)/src_bitWordShow.cpp$(PreprocessSuffix): src/bitWordShow.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_bitWordShow.cpp$(PreprocessSuffix) src/bitWordShow.cpp
 
-$(IntermediateDirectory)/src_bitSetOR.cpp$(ObjectSuffix): src/bitSetOR.cpp $(IntermediateDirectory)/src_bitSetOR.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/ANDS-IV/second/src/bitSetOR.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_bitSetOR.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/src_bitSetOR.cpp$(DependSuffix): src/bitSetOR.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_bitSetOR.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_bitSetOR.cpp$(DependSuffix) -MM src/bitSetOR.cpp
+$(IntermediateDirectory)/src_bitWordNOT.cpp$(ObjectSuffix): src/bitWordNOT.cpp $(IntermediateDirectory)/src_bitWordNOT.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/ANDS-IV/second/src/bitWordNOT.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_bitWordNOT.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_bitWordNOT.cpp$(DependSuffix): src/bitWordNOT.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_bitWordNOT.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_bitWordNOT.cpp$(DependSuffix) -MM src/bitWordNOT.cpp
 
-$(IntermediateDirectory)/src_bitSetOR.cpp$(PreprocessSuffix): src/bitSetOR.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_bitSetOR.cpp$(PreprocessSuffix) src/bitSetOR.cpp
+$(IntermediateDirectory)/src_bitWordNOT.cpp$(PreprocessSuffix): src/bitWordNOT.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_bitWordNOT.cpp$(PreprocessSuffix) src/bitWordNOT.cpp
 
-$(IntermediateDirectory)/src_bitSetShow.cpp$(ObjectSuffix): src/bitSetShow.cpp $(IntermediateDirectory)/src_bitSetShow.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/ANDS-IV/second/src/bitSetShow.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_bitSetShow.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/src_bitSetShow.cpp$(DependSuffix): src/bitSetShow.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_bitSetShow.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_bitSetShow.cpp$(DependSuffix) -MM src/bitSetShow.cpp
+$(IntermediateDirectory)/src_bitWordEqual.cpp$(ObjectSuffix): src/bitWordEqual.cpp $(IntermediateDirectory)/src_bitWordEqual.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/ANDS-IV/second/src/bitWordEqual.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_bitWordEqual.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_bitWordEqual.cpp$(DependSuffix): src/bitWordEqual.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_bitWordEqual.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_bitWordEqual.cpp$(DependSuffix) -MM src/bitWordEqual.cpp
 
-$(IntermediateDirectory)/src_bitSetShow.cpp$(PreprocessSuffix): src/bitSetShow.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_bitSetShow.cpp$(PreprocessSuffix) src/bitSetShow.cpp
+$(IntermediateDirectory)/src_bitWordEqual.cpp$(PreprocessSuffix): src/bitWordEqual.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_bitWordEqual.cpp$(PreprocessSuffix) src/bitWordEqual.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
@@ -155,6 +155,6 @@ $(IntermediateDirectory)/src_bitSetShow.cpp$(PreprocessSuffix): src/bitSetShow.c
 ## Clean
 ##
 clean:
-	$(RM) -r ./Debug/
+	$(RM) -r ./Release/
 
 
